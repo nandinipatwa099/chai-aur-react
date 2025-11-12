@@ -10,26 +10,32 @@ function App() {
 
   // let counter = 5;
 
-  // const addValue = () => {
-  //   // console.log("value added", Math.random()); 
+  const addValue = () => {
+    // console.log("value added", Math.random()); 
 
-  //   console.log("clicked", counter);   // UI UPDATION PROBLEM - control by react
-  //   // counter = counter + 1;
-  //   setCounter(counter + 1);
+    console.log("clicked", counter);   // UI UPDATION PROBLEM - control by react
+    // counter = counter + 1;
+    setCounter(counter => counter + 1); 
+    setCounter(counter => counter + 1); 
+    setCounter(counter => counter + 1); 
+    setCounter(counter => counter + 1); //9
+    // setCounter(counter + 1);//7
+    // setCounter(counter + 1);//8
+    // setCounter(counter + 1);//9
    
-  // }
+  }
 
  
   // question from interviwer ask what if setcounter is increase , what value come 
-    const addValue = () => { 
-    console.log("clicked", counter);  
-    // initial 5 and then 9
-    setCounter(prevcounter => prevcounter + 1);  //anyNAme to prevcounter -> cause code inconsistency so take same NAme  
-    setCounter(prevcounter => prevcounter + 1);
-    setCounter(prevcounter => prevcounter + 1);
-    setCounter(prevcounter => prevcounter + 1); //9
+  //   const addValue = () => { 
+  //   console.log("clicked", counter);  
+  //   // initial 5 and then 9
+  //   setCounter(prevcounter => prevcounter + 1);  //anyNAme to prevcounter -> cause code inconsistency so take same NAme  
+  //   setCounter(prevcounter => prevcounter + 1);
+  //   setCounter(prevcounter => prevcounter + 1);
+  //   setCounter(prevcounter => prevcounter + 1); //9
     
-  }
+  // }
 
   const removeValue = () => {
     setCounter(counter - 1);
