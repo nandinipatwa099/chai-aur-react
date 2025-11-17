@@ -41,8 +41,13 @@ function App() {
     }, [password])
 
     useEffect( () => {
-      passwordGenerator()
-    } , [length, numberAllowed, characterAllowed, passwordGenerator])
+      debugger //put this
+      passwordGenerator()  // by ma'am discussion
+    } , [])
+
+    // useEffect( () => {
+    //   passwordGenerator()
+    // } , [length, numberAllowed, characterAllowed, passwordGenerator])
 
   return(
     <>
