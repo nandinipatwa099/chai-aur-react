@@ -42,7 +42,7 @@ function App() {
 
     useEffect( () => {
       debugger //put this
-      passwordGenerator()  // by ma'am discussion
+      passwordGenerator()  // by ma'am 
     } , [])
 
     // useEffect( () => {
