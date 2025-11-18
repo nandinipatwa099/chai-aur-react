@@ -104,12 +104,12 @@ function App() {
             
             />
             <label htmlFor="characterInput">Characters</label>
-          </div>
+          </div> 
         </div>
       </div>
     </>
   )
 }
 
-// want button clickable task 
+// want button clickable task - done ✅ in Practice.jsx
 export default App
