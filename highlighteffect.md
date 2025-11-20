@@ -1,11 +1,14 @@
 First: Does passwordRef.current?.focus() show any highlight?
 ❌ NO.
 
+----------
+
 focus() only puts the cursor inside the input.
 It does NOT give any highlight or animation to the button.
 
 So your button will NOT look clicked.
 
+----------
 
 
 What you actually want:
@@ -18,6 +21,7 @@ Copy button to show some visual feedback
 2."Copied!" text
 3.small animation
 
+-----------
 
 🔥Summary
 
@@ -27,6 +31,8 @@ Copy button to show some visual feedback
 | Visual feedback     | `copied` state                       |
 | Change button color | conditional class                    |
 | Change text         | `"Copy"` → `"Copied!"`               |
+
+---------
 
 
 ✅ Why use backticks (` ) and ${ } ?
@@ -39,7 +45,7 @@ Dynamic values inside ${ ... }
 
 So instead of writing one static string, we can create a dynamic className.
 
-
+-----------
 
 🎯 Your button needs conditional class
 
@@ -49,7 +55,7 @@ blue button when not copied
 
 That means the class must CHANGE dynamically.
 
-
+----------
 
 🔍 Example: why ${ } is needed
 
@@ -63,6 +69,7 @@ If copied === true → add "bg-green-600"
 Else → add "bg-blue-700"
 We embed this logic inside the string using ${ }.
 
+------------
 
 🧩 Why cannot we use normal quotes?
 ❌ This will NOT work:
@@ -75,6 +82,7 @@ Correct way:
 ✔ Use backticks
 ✔ Inside, place JS in ${ }
 
+------------
 
 ✅ What template literal looks like
 `some text and some ${js-goes-here}`
@@ -84,6 +92,7 @@ So your final className is built like this:
 className={`outline-none px-3 py-1 shrink-0 text-white rounded 
   ${copied ? "bg-green-600" : "bg-blue-700"}`}
 
+-----------
 
 ⭐Summary
 | Symbol | Meaning                           |
@@ -91,4 +100,4 @@ className={`outline-none px-3 py-1 shrink-0 text-white rounded
 | `` ` ` | dynamic string (template literal) |
 | `${ }` | insert JS code inside the string  |
 
-
+--------
