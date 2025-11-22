@@ -32,7 +32,7 @@ export default function ShoppingList() {
     <>
     <ul>{listItems}</ul>
 
-    <button onClick={handleclick}>click me </button>  { /*Notice how onClick={handleClick} has no parentheses at the end! Do not call the event handler function: you only need to pass it down. React will call your event handler when the user clicks the button. */}
+    <button onClick={handleclick}>click me </button>  { /*Notice how onClick={handleClick} has no parentheses at the end! Do not call the event handler function: you only need to pass it down. React will call your event handler when the user clicks the button. */ }
 
 
     </>
