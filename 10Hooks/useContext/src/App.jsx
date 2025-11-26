@@ -9,22 +9,20 @@ import ChildA from './components/ChildA';
 // Step4: consumer ke andr jakr consume krlo
 
 function App() {
- const [user, setuser] = useState({name:"Love"});
+  const [user, setuser] = useState({name: 'Kush'});
 
   return (
     <>
      <div style={{fontWeight:'bold' , color:'darkcyan', fontSize:'20px'}}>useContext() with CodeHelp.in </div>
 
-     <div>
-      <userContext.Provider value={user}>
-        <ChildA />
-      </userContext.Provider>
-      
-
-     </div>
+     <userContext.Provider value={user}>
+       <ChildA />
+     </userContext.Provider>
+    
     </>
   )
 }
 
 export default App
 export {userContext}
+
