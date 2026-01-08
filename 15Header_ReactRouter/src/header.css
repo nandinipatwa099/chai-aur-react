@@ -15,7 +15,7 @@ body{
 .header ul {
     display: flex;
     list-style-type: none;
-    width: 300px;
+    width: 400px;
     margin: auto;
     justify-content: space-around;
     /* background-color: blue; */
