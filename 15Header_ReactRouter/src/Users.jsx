@@ -20,6 +20,17 @@ function Users() {
                 </div>
               )) 
             }
+
+            <h1>User list page with Name in URL</h1>
+            {
+              userdata.map((item)=> (
+                <div>
+                    <h4><Link to={"/user/"+item.id+"/"+item.name}>{item.name}</Link></h4>
+                </div>
+              )) 
+            }
+
+
         </div>
     )
 }

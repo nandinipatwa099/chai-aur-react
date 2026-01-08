@@ -39,6 +39,11 @@ function NavBar() {
                 Users
               </Link>
             </li>
+            <li>
+              <Link className="link" to="/user/list">
+                Lists
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

@@ -19,8 +19,11 @@ function App() {
 
         <Route element={<NavBar/>}>
           <Route path="/home" element={<Home />} />
-          <Route path="/user" element={<Users/>} />
-          <Route path="/user/:id" element={<UsersDetails/>}/>
+          <Route path="/user/list?" element={<Users/>} />      {/*  --> this is static optional segment */} 
+          {/* <Route path="/user/list" element={<Users/>} /> */}
+
+          <Route path="/user/:id/:name?" element={<UsersDetails/>}/>    {/*  --> this is dynamic optional segment */} 
+          
          
          <Route path="/in">
          <Route path="/in/user">
