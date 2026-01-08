@@ -5,6 +5,10 @@ import About from "./About"
 import {Routes, Route, Navigate} from "react-router-dom"
 import NavBar from "./NavBar"
 import PageNotFound from "./PageNotFound"
+import College from "./College"
+import Student from "./Student"
+import Department from "./Department"
+import Details from "./Details"
 function App() {
   
 
@@ -17,6 +21,13 @@ function App() {
      <Route path="/login" element= {<Login/>} />
      {/* <Route path="/*" element={<PageNotFound/>} /> */}
      <Route path="/*" element={<Navigate to="/login"/>} />
+
+     <Route path="/college" element={<College />}>
+     <Route path="student" element={<Student/>} />
+     <Route path="department" element={<Department/>} />
+     <Route path="details" element={<Details/>} /> 
+     </Route>
+
     </Routes>
     </>
   )
