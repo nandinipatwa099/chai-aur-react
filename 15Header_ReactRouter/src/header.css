@@ -1,0 +1,37 @@
+/* .header{
+    /* background-color: brown; -> for test  }*/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #dad0d0;
+    padding: 10px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.header ul {
+    display: flex;
+    list-style-type: none;
+    width: 210px;
+    margin: auto;
+    justify-content: space-around;
+    /* background-color: blue; */
+}
+
+.header ul li {
+    padding: 10px;
+   
+    /* border-color: 10px black; */
+}
+
+.header .link h2{
+    margin: 0;
+}
+
+.header .link {
+    text-decoration: none; 
+    font-size: 20px;
+}
