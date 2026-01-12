@@ -6,14 +6,14 @@ function App() {
   const [loading , setloading] = useState(false);
 
   useEffect(() => {
-    // debugger
+    debugger
     setloading(true);
 
     getUserData();
   }, []);
 
   const getUserData = async () => {
-    // debugger
+    debugger
     try{
       //risky code
        const url = "http://localhost:4000/users";
@@ -22,11 +22,15 @@ function App() {
     console.log(response);
     setuserdata(response);
 
-    setloading(false);
+    
     }
     catch(err){
       // handle error
       console.log("Error occured while fetching data ", err);
+      
+    }
+    finally{
+      // will execute always
       setloading(false);
 
     }
