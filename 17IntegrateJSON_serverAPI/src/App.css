@@ -1,5 +1,4 @@
-
-.user-list{
+.user-list {
   display: flex;
   justify-content: space-around;
   list-style: none;
@@ -11,8 +10,15 @@
 }
 
 .user-list-head {
-    font-weight:800;
-    font-size:25px;
-    /* color: red; */
-    
+  font-weight: 800;
+  font-size: 25px;
+  /* color: red; */
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  width: 650px;
+  /* background-color: red; */
 }
