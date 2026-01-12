@@ -1,0 +1,18 @@
+
+.user-list{
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  border: 1px solid rgb(147, 142, 142);
+  margin: 0px;
+  padding: 0px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.user-list-head {
+    font-weight:800;
+    font-size:25px;
+    /* color: red; */
+    
+}
