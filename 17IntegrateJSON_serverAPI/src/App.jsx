@@ -50,7 +50,8 @@ function App() {
       {
       !loading?
       userdata.map((user) => (
-        <ul key={user.name} className="user-list">
+        <ul key={user.id} className="user-list">
+          {/* // key should be id not name bcz names can repeat */}
           <li>{user.name} </li>
           <li>{user.age}</li>
           <li>{user.email}</li>
