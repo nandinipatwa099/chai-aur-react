@@ -4,6 +4,7 @@ import "./App.css";
 function App() {
   const [userdata, setuserdata] = useState([]);
   const [loading , setloading] = useState(false);
+   const url = "http://localhost:4000/users"; // you can use outside as for both work to get , post , delete
 
   useEffect(() => {
     // debugger
@@ -16,7 +17,7 @@ function App() {
     // debugger
     try{
       //risky code
-       const url = "http://localhost:4000/users";
+      //  const url = "http://localhost:4000/users";
     let response = await fetch(url);
     response = await response.json();
     console.log(response);
@@ -36,7 +37,22 @@ function App() {
     }
     
   };
-  console.log(userdata);
+  // console.log(userdata);
+
+  const deleteUser = async (id) => {
+    // console.log(id);
+    let response = await fetch(url + "/" + id,{
+      method: "Delete",
+
+    });
+    // console.log(url + "/" + id);
+    response = await response.json();
+    // console.log(response);
+    if(response){
+      alert("user deleted");
+      getUserData(); // to refresh the list after delete
+    }
+  }
 
   return (
     <>
@@ -45,6 +61,8 @@ function App() {
           <li>Name </li>
           <li>Age</li>
           <li>Email</li>
+
+          <li>Action</li>
         </ul>
 
       {
@@ -55,6 +73,7 @@ function App() {
           <li>{user.name} </li>
           <li>{user.age}</li>
           <li>{user.email}</li>
+          <li><button onClick={() => deleteUser(user.id)}>Delete</button></li>
         </ul>
       ))
       : <h2>Data Loading...</h2>

@@ -7,22 +7,10 @@
       "id": "0322"
     },
     {
-      "name": "Doe",
-      "age": 25,
-      "email": "doe@gmail.com",
-      "id": "75f1"
-    },
-    {
       "name": "Smith",
       "age": 28,
       "email": "smith@gmail.com",
       "id": "59f0"
-    },
-    {
-      "name": "Alice",
-      "age": 22,
-      "email": "alice@gmail.com",
-      "id": "0f19"
     },
     {
       "id": "db08",
@@ -31,10 +19,11 @@
       "email": "lee4343@gmail.com"
     },
     {
-      "id": "722d",
-      "name": "ravi",
+      "id": "f4e2",
+      "name": "kim",
       "age": "25",
-      "email": "ravi@gmail.com"
+      "email": "kim@gmail.com"
+
     },
     {
       "id": "4259",
