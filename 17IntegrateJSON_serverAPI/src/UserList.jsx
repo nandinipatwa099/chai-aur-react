@@ -2,6 +2,7 @@ import { NavLink, Route, Routes } from "react-router";
 import App from "./App";
 import UserAdd from "./UserAdd";
 import "./App.css"
+import UserEdit from "./UserEdit";
 
 
 
@@ -27,6 +28,7 @@ console.log("jiii")
       <Routes>
         <Route path="/" element={<App />}  />
         <Route path="/add" element={<UserAdd />}  />
+        <Route path="/edit/:id" element={<UserEdit />}/>
       </Routes>
 
        

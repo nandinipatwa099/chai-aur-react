@@ -1,10 +1,15 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
+// import { useParams } from "react-router";
 
 function UserAdd(){
+    // const {id} = useParams();
+    // console.log("id value in UserAdd component ", id);
 
     const [name, setName] = useState("");
     const [age,setAge] = useState("");
     const [email,setEmail] = useState("");
+    const navigate = useNavigate(); 
 
     const createUser = async()=> {
         console.log(name, age, email);
@@ -21,6 +26,8 @@ function UserAdd(){
         // console.log(response);
         if(response){
             alert("user added");
+            navigate("/"); // redirect to user list after adding user
+
 
     }
 }

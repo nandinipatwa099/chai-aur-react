@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import { useNavigate } from "react-router";
 
 function App() {
   const [userdata, setuserdata] = useState([]);
   const [loading , setloading] = useState(false);
+
+  const navigate = useNavigate(); {/*for redact editUser function */}
+
    const url = "http://localhost:4000/users"; // you can use outside as for both work to get , post , delete
 
   useEffect(() => {
@@ -20,7 +24,7 @@ function App() {
       //  const url = "http://localhost:4000/users";
     let response = await fetch(url);
     response = await response.json();
-    console.log(response);
+    // console.log(response);
     setuserdata(response);
 
     
@@ -52,7 +56,13 @@ function App() {
       alert("user deleted");
       getUserData(); // to refresh the list after delete
     }
-  }
+  };
+
+  const editUser = async (id)=>{
+    // console.log("edit user" ,id);
+    navigate("/edit/" + id);
+
+  };
 
   return (
     <>
@@ -74,6 +84,7 @@ function App() {
           <li>{user.age}</li>
           <li>{user.email}</li>
           <li><button onClick={() => deleteUser(user.id)}>Delete</button></li>
+          <li><button onClick={() => editUser(user.id)}>Edit</button></li>
         </ul>
       ))
       : <h2>Data Loading...</h2>
