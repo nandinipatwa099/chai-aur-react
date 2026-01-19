@@ -1,0 +1,11 @@
+
+.error{
+    border: 1px solid green;
+
+}
+.error:focus{
+    outline : 2px solid green;
+}
+.red-color{
+    color: red;
+}
