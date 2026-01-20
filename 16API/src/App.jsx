@@ -6,11 +6,7 @@ function App() {
   const [userData, setuserData] = useState([]);
 
   useEffect(() => {
-    getUserData();
-
-  }, [])
-
-  async function getUserData(){
+    async function getUserData(){
     const url = "https://jsonplaceholder.typicode.com/todos";
     let response = await fetch(url); // fetching data from API and return promise 
     response = await response.json(); // converting fetched data to JSON
@@ -20,6 +16,11 @@ function App() {
     
 
   }
+    getUserData();
+
+  }, [])
+
+  
 console.log(userData);
 
   return (
